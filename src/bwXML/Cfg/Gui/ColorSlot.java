@@ -58,8 +58,13 @@ public class ColorSlot extends Item{
 		if(this.team == null)
 			this.team = Team.getTeam(teams, this.teamId);
 		
+		if(this.style.equals("fixed") && this.meta == -1)
+			this.meta = this.team.teammeta;
+		
 		//Future Code for updatng voting
-		if(this.style.equals("voting")){}
+		if(this.style.equals("voting")){
+			this.meta = 0;
+		}
 		
 		this.stacksize = getStackSize();
 		
