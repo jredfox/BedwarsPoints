@@ -18,7 +18,18 @@ public class Team {
 	public String color;
 	public String shop_mobid;
 	public String shop_gui;
+	public boolean rndMeta;
 	
+	public void mapRestart()
+	{
+		rndMeta();
+	}
+	
+	public void rndMeta() {
+		if(this.rndMeta)
+			this.teammeta = (int)(Math.random() * 16);	
+	}
+
 	public Team(NodeList li) {
 		for(int i=0;i<li.getLength();i++)
 		{
@@ -72,7 +83,14 @@ public class Team {
 			if(str.equals("teamblock"))
 				this.teamBlock = c.replaceAll("\"", "");
 			if(str.equals("teammeta"))
+			{
+				if(c.equals("rnd"))
+				{
+					c = "" + (int)(Math.random() * 16);
+					this.rndMeta = true;
+				}
 				this.teammeta = Integer.parseInt(c);
+			}
 			if(str.equals("color"))
 				this.color = c.replaceAll("\"", "");
 			if(str.equals("Shop"))
@@ -96,6 +114,12 @@ public class Team {
 	
 	public static Team getTeam(BWMap map,String id){
 		for(Team t : map.teams)
+			if(id.equals(t.id))
+				return t;
+		return null;
+	}
+	public static Team getTeam(ArrayList<Team> teams,String id){
+		for(Team t : teams)
 			if(id.equals(t.id))
 				return t;
 		return null;

@@ -18,8 +18,12 @@ public class Item {
 	public String click_gui = null;
 	public int price = -1;
 	public HashMap<Integer,String> lores = new HashMap();
-	public String display_Name = "";
+	protected String display_Name = "";
+	protected String display_NameInit = "";
 	public int stacksize = 1;
+	public boolean rndMeta = false;
+	
+	public String getDisplayName(){return this.display_Name;}
 	
 	@Override
 	public String toString()
@@ -48,7 +52,14 @@ public class Item {
 			if(str.equals("name"))
 				this.name = c;
 			if(str.equals("meta"))
+			{
+				if(c.equals("rnd"))
+				{
+					c = "" + (int)(Math.random() * 16);
+					this.rndMeta = true;
+				}
 				this.meta = Integer.parseInt(c);
+			}
 			
 			if(str.equals("nbt"))
 				this.nbt = c;
@@ -66,7 +77,10 @@ public class Item {
 			if(str.equals("stacksize"))
 				this.stacksize = Integer.parseInt(c);
 			if(str.equals("Name"))
+			{
 				this.display_Name = c;
+				display_NameInit = c;
+			}
 			int extension = XMLUtil.getIntExtension(str);
 			if(extension != -1)
 				str = str.split("_")[0];
@@ -74,6 +88,10 @@ public class Item {
 			if(str.equals("lore"))
 				lores.put(extension, c);
 		}
+	}
+	public void upDateDisplayName()
+	{
+		
 	}
 	public void upDateLore()
 	{

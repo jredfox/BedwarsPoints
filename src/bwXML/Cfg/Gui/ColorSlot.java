@@ -1,5 +1,7 @@
 package bwXML.Cfg.Gui;
 
+import java.util.ArrayList;
+
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
@@ -10,15 +12,18 @@ import bwXML.main.XMLUtil;
 
 public class ColorSlot extends Item{
 	
-	public String team;
 	public String style;//rnd for random team and colored if boolean,voting for voting for the slot,and fixed for a fixed team
 	public boolean nonColorVoting;
 	public boolean vote;
-	public BWMap bwMap;
+	public Team team;
+	public String teamId;
 	
-	public ColorSlot(NodeList li,String bwMap) {
+	public String getDisplayName(){
+		return this.display_NameInit.replaceAll("`color`", this.team.color).replaceAll("`teamId`", this.team.id);
+	}
+	
+	public ColorSlot(NodeList li,ArrayList<Team> t) {
 		super(li);
-		this.bwMap = Registry.getMap(bwMap);
 		for(int i=0;i<li.getLength();i++)
 		{
 			Node n = li.item(i);
@@ -29,58 +34,52 @@ public class ColorSlot extends Item{
 			{
 				this.style = c.replaceAll("\"", "");
 				this.vote = this.canVote();
-				upDateWool();
 			}
 			if(str.equals("nonColorVoting"))
 				this.nonColorVoting = Boolean.parseBoolean(c);
 			if(str.equals("team"))
-				this.team = c.replaceAll("\"", "");
+				this.teamId = c.replaceAll("\"", "");
 		}
-		//If you don't specify name it will grab it from the team
-		if(this.name == null && this.team != null)
-		{
-			Team t = Team.getTeam(this.bwMap,this.team);
-			this.name = t.teamBlock;
-			if(this.meta == -1)
-				this.meta = t.teammeta;
-		}
-		if(this.meta == -1)
-			this.meta = 0;
+		upDateWool(t);
 	}
-	public void upDateWool()
+	public void upDateWool(ArrayList<Team> teams)
 	{
 		if(this.style.equals("rnd"))
 		{
-			int size = bwMap.teams.size();
+			int size = teams.size();
 			int index_team = (int)(Math.random() * (0 + size) );
-			Team t = bwMap.teams.get(index_team);
-			this.team = t.id;
-		}
-		//Future Code for updatng voting
-		if(this.style.equals("voting"))
-		{
-			
-		}
-		//checks for errors and fixes them
-		if(this.name == null && this.team != null)
-		{
-			Team t = Team.getTeam(this.bwMap,this.team);
+			Team t = teams.get(index_team);
+			t.rndMeta();
+			this.teamId = t.id;
+			this.team = t;
 			this.name = t.teamBlock;
-			if(this.meta == -1)
-				this.meta = t.teammeta;
+			this.meta = t.teammeta;
 		}
-		if(this.meta == -1)
-			this.meta = 0;
-		this.stacksize = getPlayers();
+		if(this.team == null)
+			this.team = Team.getTeam(teams, this.teamId);
+		
+		//Future Code for updatng voting
+		if(this.style.equals("voting")){}
+		
+		this.stacksize = getStackSize();
+		
 		for(int i=0;i<stacksize-1;i++)
 			this.lores.put(i, getPlayer(i) );
 		upDateLore();
+		upDateDisplayName();
+	}
+	private String getPlayer(int i) {return null;}
+
+	private int getStackSize() {
+		int players = 1;
+		if(players == 0)
+			return 1;
+		return players;
 	}
 
-	private String getPlayer(int i) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	@Override
+	public void upDateDisplayName(){this.display_Name = this.getDisplayName();}
+	
 	public int getPlayers() {
 		return 1;
 	}

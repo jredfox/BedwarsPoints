@@ -8,7 +8,9 @@ import bwXML.Cfg.Gui.Item;
 
 public interface IParser {
 	
-	public void readXML(NodeList li);
-	public void readXMLGUI(NodeList li);
+	public void readXMLPreInit(NodeList li);
+	public void readXMLPostInit(NodeList li);
+	public void readXMLGUIPreInit(NodeList li);
+	public void readXMLGUIPostInit(NodeList li);
 
 }

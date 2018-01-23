@@ -41,7 +41,7 @@ public class XMLUtil {
 	private static GUI voting_time;
 	
 
-	public static BWMap parseMapFile(InputStream in,String rootnode) {
+	public static void parseMapFile(InputStream in,String rootnode) {
 		try{
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = factory.newDocumentBuilder();
@@ -54,7 +54,7 @@ public class XMLUtil {
 			
 			//parse addons
 			for(IParser parser : InterFacialRegistry.parsers)
-				parser.readXML(rootNodes.item(0).getChildNodes());
+				parser.readXMLPreInit(rootNodes.item(0).getChildNodes());
 			
 			for(int i = 0; i < map.getLength();i++)
 			{
@@ -77,10 +77,10 @@ public class XMLUtil {
 				if(name.equals("Team"))
 					teams.add(new Team(n.getChildNodes() ));
 				if(name.equals("TeamSelectorGUI"))
-					teamSelector = new GUI(n.getChildNodes(),bwMap.worldId);
+					teamSelector = new GUI(n.getChildNodes(),teams);
 				if(name.equals("GUI"))
 				{
-					GUI g = new GUI(n.getChildNodes(),bwMap.worldId);
+					GUI g = new GUI(n.getChildNodes(),teams);
 					if(g.id.equals("voting_time"))
 						voting_time = g;
 					if(g.id.equals("voting_weather"))
@@ -100,10 +100,15 @@ public class XMLUtil {
 			obj[8] = teamSelector;
 			obj[9] = voting_weather;
 			obj[10] = voting_time;
-			return new BWMap(obj);
+			Registry.maps.add(new BWMap(obj));
+			
+			//parse addons
+			for(IParser parser : InterFacialRegistry.parsers)
+				parser.readXMLPostInit(rootNodes.item(0).getChildNodes());
+			
+			in.close();
 			
 			}catch(Exception e){e.printStackTrace();}
-		return null;
 	}
 	/**
 	 * Adds guis to the regsitry from file
@@ -120,7 +125,7 @@ public class XMLUtil {
 			
 			//parse addons
 			for(IParser parser : InterFacialRegistry.parsers)
-				parser.readXMLGUI(rootNodes.item(0).getChildNodes());
+				parser.readXMLGUIPreInit(rootNodes.item(0).getChildNodes());
 			
 			for(int i = 0; i < root.getLength();i++)
 			{
@@ -131,6 +136,10 @@ public class XMLUtil {
 				if(name.equals("GUI"))
 					Registry.guis.add(new GUI(n.getChildNodes()) );
 			}
+			//parse addons
+			for(IParser parser : InterFacialRegistry.parsers)
+				parser.readXMLGUIPostInit(rootNodes.item(0).getChildNodes());
+			in.close();
 		}catch(Exception e){e.printStackTrace();}
 	}
 	

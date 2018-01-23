@@ -8,13 +8,25 @@ import bwXML.Cfg.Interfaces.IParser;
 public class ParserTest implements IParser{
 
 	@Override
-	public void readXML(NodeList li) {
+	public void readXMLPreInit(NodeList li) {
 		System.out.println("READING MAP");
 	}
 
 	@Override
-	public void readXMLGUI(NodeList li) {
+	public void readXMLGUIPreInit(NodeList li) {
 		System.out.println("READING GUI");
+	}
+
+	@Override
+	public void readXMLPostInit(NodeList li) {
+//		System.out.println("post-map");
+		
+	}
+
+	@Override
+	public void readXMLGUIPostInit(NodeList li) {
+//		System.out.println("post-gui");
+		
 	}
 
 }

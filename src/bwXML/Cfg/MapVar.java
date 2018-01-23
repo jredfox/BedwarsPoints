@@ -4,7 +4,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class MapVar {
-	public String resourceMessege = "\u273D `int` resources \u273D";
+	private String resourceMessege = "\u273D `int` resources \u273D";
 	public String worldId = "worldId";
 	public String worldName = "name";
 	
@@ -38,6 +38,13 @@ public class MapVar {
 			else if(n.getNodeName().equals("hasVMobs"))
 				hasVMobs = Boolean.parseBoolean(n.getTextContent());
 		}
+	}
+	
+	public void setResourceMessege(String s){this.resourceMessege = s;}
+	
+	public String getResourceMessege(int resource)
+	{
+		return resourceMessege.replaceAll("`int`", "" + resource);
 	}
 	@Override
 	public String toString(){return "id:" + this.worldId + " Name:" + this.worldName + " resourceMsg: " + this.resourceMessege + "\n" 
