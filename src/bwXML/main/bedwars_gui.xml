@@ -1,0 +1,677 @@
+﻿<GUIS>
+
+<GUI>
+<id>"gui-mainscreen"</id>
+<name>"$Shop"</name>
+
+<Item>
+<name>"minecraft:sandstone"</name>
+<nbt>{Display:{Name:"§3Blocks"} }</nbt>
+<slot>0,1</slot>
+<click>"gui-blocks"</click>
+</Item>
+
+<Item>
+<name>"minecraft:iron_sword"</name>
+<nbt>{Display:{Name:"§3Swords"} }</nbt>
+<slot>1,1</slot>
+<click>"gui-swords"</click>
+</Item>
+
+<Item>
+<name>"minecraft:diamond_pickaxe"</name>
+<nbt>{Display:{Name:"§3Tools"} }</nbt>
+<slot>2,1</slot>
+<click>"gui-tools"</click>
+</Item>
+
+<Item>
+<name>"minecraft:bow"</name>
+<nbt>{Display:{Name:"§3Bows"} }</nbt>
+<slot>3,1</slot>
+<click>"gui-bows"</click>
+</Item>
+
+<Item>
+<name>"minecraft:iron_chestplate"</name>
+<nbt>{Display:{Name:"§3Armors"} }</nbt>
+<slot>4,1</slot>
+<click>"gui-armor"</click>
+</Item>
+
+<Item>
+<name>"minecraft:potion"</name>
+<nbt>{Display:{Name:"§3Potions"} }</nbt>
+<slot>5,1</slot>
+<click>"gui-potions"</click>
+</Item>
+
+<Item>
+<name>"minecraft:chest"</name>
+<nbt>{Display:{Name:"§3Chests"} }</nbt>
+<slot>6,1</slot>
+<click>"gui-chests"</click>
+</Item>
+
+<Item>
+<name>"minecraft:apple"</name>
+<nbt>{Display:{Name:"§3Food"} }</nbt>
+<slot>7,1</slot>
+<click>"gui-food"</click>
+</Item>
+
+<Item>
+<name>"minecraft:blaze_rod"</name>
+<nbt>{Display:{Name:"§4Special"} }</nbt>
+<slot>8,1</slot>
+<click>"gui-special"</click>
+</Item>
+</GUI>
+
+<GUI>
+<id>"gui-blocks"</id>
+
+<Item>
+<name>"minecraft:sandstone"</name>
+<stacksize>32</stacksize>
+<price>150</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:sandstone"</name>
+<stacksize>64</stacksize>
+<price>250</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:obsidian"</name>
+<price>400</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:cobblestone"</name>
+<stacksize>32</stacksize>
+<price>200</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:cobblestone"</name>
+<stacksize>64</stacksize>
+<price>300</price>
+<slot>4,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:glass"</name>
+<stacksize>32</stacksize>
+<price>200</price>
+<slot>5,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:ice"</name>
+<stacksize>3</stacksize>
+<price>100</price>
+<slot>6,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:dirt"</name>
+<stacksize>64</stacksize>
+<price>100</price>
+<slot>7,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:planks"</name>
+<meta>4</meta>
+<stacksize>64</stacksize>
+<price>200</price>
+<slot>8,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0><!--supports lore for custom unicode looks for the carrot symbol parsing-->
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name><!--supports name for custom unicode characters-->
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-swords"</id>
+
+<Item>
+<name>"minecraft:wooden_sword"</name>
+<price>100</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:stone_sword"</name>
+<price>200</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:stone_sword"</name>
+<nbt>{ench:[{id:19,lvl:1}] }</nbt>
+<price>280</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:iron_sword"</name>
+<price>580</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_sword"</name>
+<nbt>{ench:[{id:20,lvl:1}],Display:{ Name:"§4Burner" } }</nbt>
+<price>800</price>
+<slot>4,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_sword"</name>
+<nbt>{ench:[{id:16,lvl:3}],Display:{ Name:"§9Murderer's Sword" } }</nbt>
+<price>1000</price>
+<slot>5,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_sword"</name>
+<nbt>{ench:[ { id:16,lvl:3 },{id:20,lvl:1},{id:19,lvl:1} ],Display:{Name:"§9Special from Forest"} }</nbt>
+<price>2000</price>
+<slot>6,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:diamond_sword"</name>
+<price>1500</price>
+<slot>7,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0><!--supports lore for custom unicode looks for the carrot symbol parsing-->
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name><!--supports name for custom unicode characters-->
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-tools"</id>
+
+<Item>
+<name>"minecraft:stone_pickaxe"</name>
+<price>150</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:iron_pickaxe"</name>
+<nbt>{ench:[ {id:32,lvl:2} ] }</nbt>
+<price>500</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_pickaxe"</name>
+<nbt>{ench:[ {id:32,lvl:1} ] }</nbt>
+<price>800</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:diamond_pickaxe"</name>
+<nbt>{ench:[ {id:32,lvl:3} ] }</nbt>
+<price>1000</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:stone_shovel"</name>
+<nbt>{ench:[ {id:32,lvl:1} ] }</nbt>
+<price>100</price>
+<slot>4,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:iron_shovel"</name>
+<nbt>{ench:[ {id:32,lvl:5} ] }</nbt>
+<price>350</price>
+<slot>5,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_axe"</name>
+<nbt>{ench:[ {id:32,lvl:2} ],Display:{ Name:"§6Sylvia" } }</nbt>
+<price>300</price>
+<slot>6,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<Name>"§c◄ §aBack §c◄"</Name><!--supports name for custom unicode characters-->
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0><!--supports lore for custom unicode looks for the carrot symbol parsing-->
+<lore_1>"§7to the previous page. "</lore_1>
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-bows"</id>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<price>100</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<stacksize>8</stacksize>
+<price>500</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:bow"</name>
+<price>300</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:bow"</name>
+<nbt>{ ench:[ {id:48,lvl:3}] ,Display:{ Name:"§9Sniper's Bow" } }</nbt>
+<price>1000</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:bow"</name>
+<nbt>{ ench:[ {id:48,lvl:2},{id:50,lvl:1}] ,Display:{ Name:"§9Zero Factor" } }</nbt>
+<price>1500</price>
+<slot>4,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:bow"</name>
+<nbt>{ ench:[ {id:48,lvl:4},{id:50,lvl:1},{id:19,lvl:1},{id:51,lvl:1}] ,Display:{ Name:"§9Product 48" } }</nbt>
+<price>2500</price>
+<slot>5,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0><!--supports lore for custom unicode looks for the carrot symbol parsing-->
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name><!--supports name for custom unicode characters-->
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-armor"</id>
+
+<Item>
+<name>"minecraft:leather_helmet"</name>
+<nbt>{ ench:[ {id:0,lvl:1} ],Display:{ Name:"§5Second skin layer" } }</nbt>
+<price>70</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:leather_chestplate"</name>
+<nbt>{ ench:[ {id:0,lvl:1} ],Display:{ Name:"§5Second skin layer" } }</nbt>
+<price>200</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:leather_leggings"</name>
+<nbt>{ ench:[ {id:0,lvl:1} ],Display:{ Name:"§5Second skin layer" } }</nbt>
+<price>100</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:leather_boots"</name>
+<nbt>{ ench:[ {id:0,lvl:1} ],Display:{ Name:"§5Second skin layer" } }</nbt>
+<price>70</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:iron_helmet"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Combined armor" } }</nbt>
+<price>200</price>
+<slot>4,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:iron_chestplate"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Combined armor" } }</nbt>
+<price>450</price>
+<slot>5,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:iron_leggings"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Combined armor" } }</nbt>
+<price>450</price>
+<slot>6,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:iron_boots"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Combined armor" } }</nbt>
+<price>200</price>
+<slot>7,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_helmet"</name>
+<nbt>{ ench:[ {id:1,lvl:4},{id:0,lvl:3} ],Display:{ Name:"§aThermo armor" } }</nbt>
+<price>400</price>
+<slot>8,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_chestplate"</name>
+<nbt>{ ench:[ {id:1,lvl:4},{id:0,lvl:3} ],Display:{ Name:"§aThermo armor" } }</nbt>
+<price>600</price>
+<slot>0,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_leggings"</name>
+<nbt>{ ench:[ {id:1,lvl:4},{id:0,lvl:3} ],Display:{ Name:"§aThermo armor" } }</nbt>
+<price>550</price>
+<slot>1,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:golden_boots"</name>
+<nbt>{ ench:[ {id:1,lvl:4},{id:0,lvl:3} ],Display:{ Name:"§aThermo armor" } }</nbt>
+<price>400</price>
+<slot>2,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:chainmail_helmet"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:3,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Chinese armor" } }</nbt>
+<price>500</price>
+<slot>3,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:chainmail_chestplate"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:3,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Chinese armor" } }</nbt>
+<price>650</price>
+<slot>4,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:chainmail_leggings"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:3,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Chinese armor" } }</nbt>
+<price>600</price>
+<slot>5,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:chainmail_boots"</name>
+<nbt>{ ench:[ {id:0,lvl:2},{id:3,lvl:2},{id:4,lvl:2} ],Display:{ Name:"§9Chinese armor" } }</nbt>
+<price>500</price>
+<slot>6,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:diamond_helmet"</name>
+<nbt>{ ench:[ {id:0,lvl:3},{id:4,lvl:3} ],Display:{ Name:"§4Ricochet helmet" } }</nbt>
+<price>700</price>
+<slot>7,1</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0>
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name>
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-potions"</id>
+
+<Item>
+<name>"minecraft:potion"</name>
+<meta>8229</meta>
+<price>300</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:potion"</name>
+<meta>8225</meta>
+<price>350</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:potion"</name>
+<meta>8258</meta>
+<price>300</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:potion"</name>
+<meta>8233</meta>
+<price>400</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:potion"</name>
+<meta>16456</meta>
+<price>200</price>
+<slot>4,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:potion"</name>
+<meta>16428</meta>
+<price>200</price>
+<slot>5,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:potion"</name>
+<meta>16460</meta>
+<price>500</price>
+<slot>6,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0>
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name>
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-chests"</id>
+
+<Item>
+<name>"minecraft:chest"</name>
+<nbt>{Display:{Lore:[0:"",1:"Chest, with items",2:"§athat only teamates can use.",3:"Works like an ender-chest",],Name:"§aTeam storage ",},}</nbt>
+<price>500</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:ender_chest"</name>
+<nbt>{Display:{Lore:[0:"",1:"Ender chest - place for",2:"storing private photos...",],Name:"§aPersonal storage ",},}</nbt>
+<price>500</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0>
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name>
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-food"</id>
+
+<Item>
+<name>"minecraft:apple"</name>
+<stacksize>3</stacksize>
+<price>50</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:bread"</name>
+<price>30</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:cookie"</name>
+<stacksize>8</stacksize>
+<price>50</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:cooked_beef"</name>
+<price>50</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0>
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name>
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+<GUI>
+<id>"gui-special"</id>
+
+<Item>
+<name>"minecraft:ender_pearl"</name>
+<Name>"§aEnder Pearl"</Name>
+<nbt>{ench:[0:{lvl:1s,id:48s,}</nbt>
+<price>550</price>
+<slot>0,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:stick"</name>
+<Name>"§aBamboo stick"</Name>
+<nbt>{ench:[ {id:19,lvl:1}</nbt>
+<price>500</price>
+<slot>1,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:slime"</name>
+<Name>"§aTrampoline"</Name>
+<lore_0>"§r§c§lYour second life!"</lore_0>
+<nbt>{ench:[0:{lvl:1s,id:48s,}</nbt>
+<price>600</price>
+<slot>2,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:tnt"</name>
+<Name>"§aGranade"</Name>
+<lore_0>"§r§c§lDon't throw nearby!"</lore_0>
+<nbt>{ench:[0:{lvl:1s,id:48s,}</nbt>
+<price>600</price>
+<slot>3,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:string"</name>
+<Name>"§aTrap"</Name>
+<lore_0>"§r§c§lBe careful, look around!"</lore_0>
+<nbt>{ench:[0:{lvl:1s,id:48s,}]}</nbt>
+<price>300</price>
+<slot>4,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:jukebox"</name>
+<Name>"§aBox with money!"</Name>
+<nbt>{ench:[0:{lvl:1s,id:48s}],Display:{Lore:[0:"",1:"§7Each box contains",2:"§a100 resources§7."] }</nbt>
+<price>120</price>
+<slot>5,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:skull"</name>
+<Name>"§aSkeleton-guardian"</Name>
+<nbt>{ench:[0:{lvl:1s,id:48s,}],Display:{Lore:[0:"",1:"§7Skeleton, who will",2:"§7Guard at one place.",3:"§7Upon detection of the enemy",4:"§awithin a radius of 10 blocks",5:"§7He will open fire."]} }</nbt>
+<price>500</price>
+<slot>6,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:bone"</name>
+<Name>"§9Wolf-Guardian"</Name>
+<nbt>{ench:[0:{lvl:1s,id:48s,}],Display:{ Lore:[0:"",1:"§fSummon wolf-guardian, which attacks players",2:"§fIn 5 blocks radius.",] } }</nbt>
+<price>399</price>
+<slot>7,0</slot>
+</Item>
+
+<Item>
+<name>"minecraft:arrow"</name>
+<click>"gui-mainscreen"</click>
+<lore_0>"§7Click to go back"</lore_0>
+<lore_1>"§7to the previous page. "</lore_1>
+<Name>"§c◄ §aBack §c◄"</Name>
+<slot>3,2</slot>
+</Item>
+
+</GUI>
+
+
+
+</GUIS>

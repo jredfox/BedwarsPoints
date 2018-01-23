@@ -1,0 +1,13 @@
+<notes>
+	<id>10</id>
+    <note  expire="2" priority= "TOP" author="Andy">
+        <title>Shopping List</title>
+ 	<contents>This is a Shopping List</contents>
+     </note>
+    <note>
+    	<title>Christmas Ghosts</title>
+			<contents>
+				Terrible show
+			</contents>
+    </note>
+ </notes>
